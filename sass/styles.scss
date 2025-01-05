@@ -1,0 +1,52 @@
+/** @format */
+
+@use "initial";
+@use "variables";
+@use "header";
+@use "navbar";
+@use "modal-navbar";
+@use "gallery";
+@use "details";
+@use "input";
+@use "modal-cart";
+@use "modal-gallery";
+
+.main-container {
+  width: 375px;
+  margin: auto;
+  position: relative;
+  @media (min-width: 1115px) {
+    width: 1115px;
+  }
+}
+.content {
+  @media only screen and (min-width: 1115px) {
+    display: flex;
+    padding: 90px 50px;
+    gap: 124px;
+  }
+}
+
+.show{
+  display: block;
+}
+
+.modalmenunav{
+  display: block;
+  @media only screen and (min-width: 1115px) {
+    display: none;
+  }
+}
+
+
+footer, .attribution {
+
+  text-align: center;
+  
+
+  & a {
+    text-decoration: none;
+    
+  }
+}
+

@@ -1,0 +1,55 @@
+/** @format */
+
+@use "variables";
+@use "mixins";
+
+.modal-navbar {
+  background-color: variables.$White;
+  width: 250px;
+  height: 100%;
+  padding: 28px 24px;
+
+  &__background {
+    background-color: variables.$Black-modal;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 50px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: variables.$Very-dark-blue;
+    font-weight: variables.$font-bold;
+    font-size: 1.1em;
+  }
+
+  &__close-icon:hover {
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 1115px) {
+
+    .modal-navbar{
+    
+      display: none;
+    }
+   
+    
+    &__background {
+      display: none;
+    }
+  }
+}

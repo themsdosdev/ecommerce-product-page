@@ -1,0 +1,56 @@
+/** @format */
+
+@use "variables";
+@use "mixins";
+
+.gallery {
+  &__image-container {
+    background-image: url(../images/image-product-1.jpg);
+    height: 300px;
+    width: 100%;
+    background-position-y: -35px;
+    background-size: cover;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__icon-previous {
+    @include mixins.image-btn(220px, 15px, false, '../images/icon-previous-orange.svg');
+  }
+
+  &__icon-next {
+    @include mixins.image-btn(220px, 320px, false, '../images/icon-next-orange.svg');
+  }
+
+  &__thumbnails {
+    display: none;
+
+    @media only screen and (min-width: 1115px) {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__thumbnail {
+    width: 90px;
+    border-radius: 16px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+      border: 3px solid variables.$Orange;
+    }
+
+    
+  }
+
+  @media only screen and (min-width: 1115px) {
+    width: 446px;
+    &__image-container {
+      height: 446px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      background-position-y: 0px;
+    }
+  }
+}
